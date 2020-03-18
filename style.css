@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script|Roboto+Slab:600&display=swap');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style: none;
+	color: #000;
+	font-family: 'Roboto Slab', serif;
+}
+
+/****************/
+/*navigation bar*/
+/****************/
+nav ul {
+	background: rgb(132, 96, 54, 0.8);
+	/*background-color: #846036;*/
+	height: 10vh;
+	width: 100vw;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	color: #fff;
+	position: fixed;
+	z-index: 1;
+}
+
+nav ul li a {
+	text-transform: uppercase;
+	font-size: 1.1rem;
+	font-weight: 200;
+	color: #fff;
+	/*flex: 1;	*/
+}
+nav ul li:first-child a {
+	font-family: 'Kaushan Script', cursive;
+	font-size: 2rem;
+	text-transform: capitalize;
+	/*flex: 3;*/
+}
+
+/**************/
+/*hero section*/
+/**************/
+section.hero {
+	position: relative;
+	width: 100vw;
+	height: 95vh;	
+}
+div.beans {
+	background-image: url('https://www.dandelionchocolate.com/wp-content/uploads/2017/10/beans-1.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	/*background-position: center;*/
+	position: absolute;
+	width: 50%;
+	height: 100%;	
+}
+div.products {
+	background: #000;
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	right: 0;	
+}
+div.products img {
+	width: 80%;
+	height: 50%;
+	margin: auto;
+	margin-top: 50%;
+    margin-left: 50%;
+    transform: translate(-50%, -50%)
+}
+div.hero-text {
+	position: absolute;
+	font-size: 4rem;
+    text-transform: uppercase;
+    color: #fff;
+    top: 40vh;
+    left: 50vw;
+    transform: translate(-50%, 0);
+    letter-spacing: 10px;
+}
+
+
+
