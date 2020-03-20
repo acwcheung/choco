@@ -49,29 +49,90 @@ section.hero {
 	height: 95vh;	
 }
 div.beans {
-	background-image: url('https://www.dandelionchocolate.com/wp-content/uploads/2017/10/beans-1.jpg');
+	background: rgba(0, 0, 0, 0.4) url('https://www.dandelionchocolate.com/wp-content/uploads/2017/10/beans-1.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
-	/*background-position: center;*/
 	position: absolute;
 	width: 50%;
-	height: 100%;	
+	height: 100%;
+	transition: all 0.3s linear;
 }
-div.products {
+div.beans:hover {
+	cursor: pointer;
+}
+
+ul.products {
+	margin: 0;
+	padding: 0;
 	background: #000;
 	position: absolute;
 	width: 50%;
 	height: 100%;
 	right: 0;	
 }
-div.products img {
-	width: 80%;
-	height: 50%;
-	margin: auto;
-	margin-top: 50%;
-    margin-left: 50%;
-    transform: translate(-50%, -50%)
+ul.products::after {
+	content: '';
+	background: rgba(0, 0, 0, 0.4);
+	position: absolute;
+	left: 0;
+    top: 11%;
+	width: 100%;
+	height: 89%;
+	z-index: 5;	
 }
+/*code hover on psuedo code*/
+ul.products:hover::after {
+	background: rgba(0, 0, 0, 0);
+	cursor: pointer;
+}
+
+/**************************/
+/* slide show of products */
+/**************************/
+ul.products li {
+	display: block;
+	position: absolute;
+	width: 90%;
+	height: 80%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	top: 15%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    opacity: 0;
+    animation: slide 18s linear infinite;
+}
+ul.products li:nth-child(1) {
+	background-image: url('image/choco-1.jpg');
+}
+ul.products li:nth-child(2) {
+	background-image: url('image/choco-2.jpeg');
+	animation-delay: 6s;
+}
+ul.products li:nth-child(3) {
+	background-image: url('image/choco-3.jpg');
+	animation-delay: 12s;
+}
+
+@keyframes slide {
+	0% {
+		opacity: 0;		
+	}
+	17% {
+		opacity: 1;		
+	}
+	33% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;	
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
 div.hero-text {
 	position: absolute;
 	font-size: 4rem;
@@ -82,6 +143,22 @@ div.hero-text {
     transform: translate(-50%, 0);
     letter-spacing: 10px;
 }
+
+
+
+
+
+/*  utility  */
+button {
+	width: 100px;
+	height: 50px;
+	font-size: 1rem;
+	text-align: center;
+}
+
+
+
+
 
 
 
