@@ -13,9 +13,8 @@
 /****************/
 /*navigation bar*/
 /****************/
-nav ul {
-	background: rgb(132, 96, 54, 0.8);
-	/*background-color: #846036;*/
+nav > ul {
+	background: rgb(132, 96, 54);
 	height: 10vh;
 	width: 100vw;
 	display: flex;
@@ -23,21 +22,49 @@ nav ul {
 	align-items: center;
 	color: #fff;
 	position: fixed;
-	z-index: 1;
+	z-index: 10;
 }
 
-nav ul li a {
+nav > ul > li > a {
 	text-transform: uppercase;
 	font-size: 1.1rem;
 	font-weight: 200;
 	color: #fff;
-	/*flex: 1;	*/
 }
-nav ul li:first-child a {
+nav > ul > li:first-child > a {
 	font-family: 'Kaushan Script', cursive;
 	font-size: 2rem;
 	text-transform: capitalize;
-	/*flex: 3;*/
+}
+/* the logo */
+nav > ul > li:first-child {
+	margin-left: 3rem;
+	margin-right: 15vw;
+}
+nav > ul > li:last-child {
+	margin-right: 3vw;
+}
+nav > ul > li {
+	padding: 20px;
+}
+/* pull down menu */
+nav > ul > li > ul {
+	background: rgb(132, 96, 54);
+	position: absolute;
+	top: 9.7vh;
+	display: none;
+}
+nav > ul > li:hover > ul,
+nav > ul > li > ul:hover {
+	display: block;
+}
+nav > ul > li > ul > li {
+	padding: 1rem;
+	
+}
+nav > ul > li > ul > li > a {
+	text-transform: uppercase;
+	color: #fff;
 }
 
 /**************/
