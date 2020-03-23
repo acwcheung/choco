@@ -191,6 +191,7 @@ ol.description li {
 	position: absolute;
 	width: 95%;
 	padding: 2.5rem;
+	border-radius: 8px;
 	background-color: #f9f9f9;
 	top: 50%;
 	left: 50%;
@@ -207,6 +208,7 @@ div.slide-wrapper {
 	height: 75vh;
 	overflow: hidden;
 	position: relative;
+	box-shadow: 2px 0px 10px #000, -2px 0px 10px #fafafa;
 }
 ul.slide-container {
 	/* slide width x 8 */
@@ -214,6 +216,7 @@ ul.slide-container {
 	height: 80vh;
 	display: flex;
 	justify-content: flex-start;
+	transition: transform 0.8s ease-in-out;
 }
 
 ul.slide-container li {
@@ -221,7 +224,7 @@ ul.slide-container li {
 	height: 80vh;
 	background-size: cover;
 	background-position: center;
-	background-repeat: no-repeat;
+	background-repeat: no-repeat;	
 }
 
 ul.slide-container li:nth-child(1) {
@@ -262,6 +265,10 @@ div.slide-wrapper a.prev {
 div.slide-wrapper a.next {
 	right: 5%;
 }
+
+
+
+
 
 /*  utility  */
 h1 {
