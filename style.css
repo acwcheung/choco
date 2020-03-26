@@ -22,6 +22,7 @@ nav > ul {
 	align-items: center;
 	color: #fff;
 	position: fixed;
+	top: 0;
 	z-index: 10;
 }
 
@@ -66,6 +67,9 @@ nav > ul > li > ul > li > a {
 	text-transform: uppercase;
 	color: #fff;
 }
+
+/* home page */
+
 
 /**************/
 /*hero section*/
@@ -161,20 +165,52 @@ ul.products li:nth-child(3) {
 }
 
 div.hero-text {
-	position: absolute;
 	font-size: 4rem;
+	letter-spacing: 10px;
     text-transform: uppercase;
     color: #fff;
+    display: block;
+    position: absolute;
     top: 40vh;
     left: 50vw;
     transform: translate(-50%, 0);
-    letter-spacing: 10px;
+    text-align: center;
+    animation: heroText 2s 1 ease-out;
 }
+
+@keyframes heroText {
+	0% {
+		top: -20vh;
+	}
+	100% {
+		top: 40vh;
+	}
+}
+
+
+/* about page */
+section.about {
+	position: relative;
+	margin-top: 20vh;
+}
+
+div.about-container {
+	width: 80vw;
+	margin: auto;	
+}
+
+section.process {
+	
+
+	
+}
+
 
 /******************************/
 /* carousel of making process */
 /******************************/
 div.process-container {
+	margin-top: 5rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -197,6 +233,7 @@ ol.description li {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	display: none;
+	transition: display 1s ease-in-out;
 }
 ol.description li:first-child {
 	display: block;
@@ -271,10 +308,14 @@ div.slide-wrapper a.next {
 
 
 /*  utility  */
+
+
+
+
 h1 {
 	font-size: 3rem;
 	text-align: center;
-	margin: 4rem 1rem 2rem 1rem;
+	margin: 4rem 1rem 2rem;
 	text-transform: capitalize;
 	color: rgb(132, 96, 54);
 }
@@ -285,8 +326,15 @@ h3 {
 	font-size: 1.8rem;
 }
 
+div {
+	width: 80vw;
+	margin: auto;
+}
+
 p {
-	font-size: 1.5rem;
+	font-size: 1.2rem;
+	font-family: verdana;
+	margin-bottom: 2rem;
 }
 button {
 	width: 100px;

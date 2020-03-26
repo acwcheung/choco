@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Craft Chocolate - About</title>
+	<link rel="stylesheet" type="text/css" href="style.css">	
+</head>
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li><a href="index.html">craft choco</a></li>
+				<li><a href="shop.html">shop</a></li>
+				<li><a href="">experience</a></li>
+				<li><a href="">visit</a></li>
+				<li><a href="about.html">about</a>
+					<ul>
+						<li><a href="">overview</a></li>
+						<li><a href="">process</a></li>
+						<li><a href="">our beans and sugar</a></li>
+						<li><a href="">contact us</a></li>
+					</ul>
+				</li>
+
+				<li><a href="">more</a>
+					<ul>
+						<li><a href="">retailer</a></li>
+						<li><a href="">wholesale</a></li>
+						<li><a href="">private event</a></li>
+						<li><a href="">jobs</a></li>	
+					</ul>
+				</li>
+			</ul>
+		</nav>			
+	</header>
+
+	<section class="about">
+		<div class="about-container">
+			<h1>small batch chocolate</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempor efficitur lacus semper mollis. In lacinia feugiat maximus. Nam vitae aliquam lectus. In at viverra arcu. In hac habitasse platea dictumst. Nullam convallis, augue quis scelerisque suscipit, lorem purus lacinia magna, id viverra velit ligula eu tellus. Curabitur luctus diam sed sapien placerat venenatis. Aenean fringilla nibh velit, id aliquam ligula sagittis euismod. Pellentesque condimentum quam quis varius condimentum. Aenean faucibus nibh vitae mollis imperdiet.</p>		
+		</div>
+	</section>	
+	
+	<section class="process">
+		<h1>beans to bars process</h1>
+		<div class="process-container">
+ 			<div class="slide-wrapper"> 
+ 				<ul class="slide-container">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>										
+				</ul>
+				<a class="prev">&#10094;</a>
+				<a class="next">&#10095;</a> 				
+ 			</div>
+ 			<ol class="description">
+ 				<li><h3>Step 1: Sorting</h3><p>Hand sorting raw cocoa beans to remove poor quality beans</p></li>
+ 				<li><h3>Step 2: Roasting</h3><p>Slow roasting the cocoa beans at low temps to enhance natural flavors</p></li>
+ 				<li><h3>Step 3: Cracking</h3><p>Cracking the roasted beans to get to the cacao nibs ("meat" of the bean) inside; Winnowing away the lighter-weight husk using a vacuum system</p></li>
+ 				<li><h3>Step 4: Grinding</h3><p>Slowly grinding the nibs with stone wheels until the pressure and heat turn the nibs into a liquid (100% dark chocolate for those counting)</p></li>
+ 				<li><h3>Step 5: Flavoring</h3><p>Adding sugar and a little cocoa butter (which we press in-house), then continuing to grind until we have smooth, creamy chocolate</p></li>
+ 				<li><h3>Step 6: Conching</h3><p>Conching the liquid chocolate to reduce natural acidity and enhance flavors and texture</p></li>
+ 				<li><h3>Step 7: Tempering</h3><p>Tempering the chocolate (scientific stuff...to properly align the crystals) to lock in a great shine, snap and texture</p></li>
+ 				<li><h3>Step 8: Molding</h3><p>Pour into molds to create truffles and chocolate bars which are then hand wrapped</p></li> 				
+ 			</ol>				 			
+			</div>
+	</section>
+
+	
+
+
+
+	
+
+	
+	
+
+	
+
+
+
+
+	<script>
+
+		const prev = document.querySelector('div.slide-wrapper > a.prev');
+		const next = document.querySelector('div.slide-wrapper > a.next');
+		const slides = document.querySelector('ul.slide-container');
+		const steps = document.querySelectorAll('ol.description > li');
+		let slideCount = 1;
+
+		prev.addEventListener('click', () => {
+			if(slideCount > 1) {
+				n = slideCount - 2;
+				slides.style.transform = `translate(${-35*n}vw ,0)`; 
+				slideCount--;
+				showStep(slideCount);
+			}	
+		})
+
+		next.addEventListener('click', () => {
+			if(slideCount < 8) {
+				n = slideCount;
+				slides.style.transform = `translate(${-35*n}vw ,0)`; 
+				slideCount++; 
+				showStep(slideCount);
+			}	
+		})
+
+		function showStep(n) {
+			steps.forEach(step => step.style.display = 'none');
+			const index = n - 1;
+			steps[index].style.display = 'block';
+}
+	</script>
+</body>
+</html>
