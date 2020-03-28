@@ -1,42 +1,55 @@
-const products = document.querySelector('ul.products');
-const beans = document.querySelector('div.beans');
-const prev = document.querySelector('div.slide-wrapper > a.prev');
-const next = document.querySelector('div.slide-wrapper > a.next');
-const slides = document.querySelector('ul.slide-container');
-const steps = document.querySelectorAll('ol.description > li');
-let slideCount = 1;
+// repeated html codes
+const navbar = `
+	<nav class="sm-screen">			
+		<div class="menu-wrap">
+			<input type="checkbox" class="toggler">
+			<div class="hamburger">
+				<div></div>
+			</div>
+			<div class="menu">
+				<ul>
+					<li><a href="shop.html">shop</a></li>
+					<li><a href="">experience</a></li>
+					<li><a href="">visit</a></li>
+					<li><a href="about.html">about</a>
+					<li><a href="">more</a></li>
+				</ul>
+			</div>
+		</div>
+		<a href="index.html">craft choco</a>
+		<div></div>
+	</nav>
 
-// hero section
-products.addEventListener('mouseover', () => {
-	beans.style.backgroundBlendMode = 'overlay';
-})
+	<nav class="lg-screen">
+		<ul>
+			<li><a href="index.html">craft choco</a></li>
+			<li><a href="shop.html">shop</a></li>
+			<li><a href="">experience</a></li>
+			<li><a href="">visit</a></li>
+			<li><a href="about.html">about</a>
+				<ul>
+					<li><a href="">overview</a></li>
+					<li><a href="">process</a></li>
+					<li><a href="">our beans and sugar</a></li>
+					<li><a href="">contact us</a></li>
+				</ul>
+			</li>
 
-products.addEventListener('mouseout', () => {
-	beans.style.backgroundBlendMode = 'normal';
-})
+			<li><a href="">more</a>
+				<ul>
+					<li><a href="">retailer</a></li>
+					<li><a href="">wholesale</a></li>
+					<li><a href="">private event</a></li>
+					<li><a href="">jobs</a></li>	
+				</ul>
+			</li>
+		</ul>
+	</nav>
+`
 
-// bean to bar process
-prev.addEventListener('click', () => {
-	if(slideCount > 1) {
-		n = slideCount - 2;
-		slides.style.transform = `translate(${-35*n}vw ,0)`; 
-		slideCount--;
-		showStep(slideCount);
-	}	
-})
+//DOM selectors
+const header = document.querySelector('header');
 
-next.addEventListener('click', () => {
-	if(slideCount < 8) {
-		n = slideCount;
-		slides.style.transform = `translate(${-35*n}vw ,0)`; 
-		slideCount++; 
-		showStep(slideCount);
-	}	
-})
 
-function showStep(n) {
-	steps.forEach(step => step.style.display = 'none');
-	const index = n - 1;
-	steps[index].style.display = 'block';
-}
-
+//DOM manipulation
+header.innerHTML = navbar;

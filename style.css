@@ -10,40 +10,27 @@
 	font-family: 'Roboto Slab', serif;
 }
 
-
-/*
-hamburger menu
-wrap 
-	input checkbox opacity: 0 (use the checked to chnage properties)
-	hamburger wrap 
-		div for one line (before/ after)
-*/
-
-
-
 /****************/
 /*navigation bar*/
 /****************/
 
 /* small screen navbar */
-
 nav.sm-screen {
 	background: rgb(132, 96, 54);
 	height: 10vh;
 	width: 100vw;
 	position: fixed;
 	top: 0;
-	z-index: 10;
-	display: none;
+	z-index: 10;	
 }
 
-nav.sm-screen > div.menu-wrap > div.menu {
-	display: none;
-	/* not working */
-	transition: all 0.4s ease; 
+/* small screen hidden menu */
+nav.sm-screen div.menu {
+	opacity: 0;
+	transition: all 0.8s ease; 
 }
 
-nav.sm-screen > div.menu-wrap > div.menu > ul {
+nav.sm-screen div.menu ul {
 	width: 100vw;
 	height: 85vh;
 	background-color: rgba(0, 0, 0, 0.7);
@@ -52,17 +39,19 @@ nav.sm-screen > div.menu-wrap > div.menu > ul {
 	left: 0;
 	text-align: center;	
 }
-nav.sm-screen > div.menu-wrap > div.menu > ul > li {
+nav.sm-screen div.menu ul li {
 	padding: 20px;
 }
 
-nav.sm-screen > div.menu-wrap > div.menu > ul > li > a {
+nav.sm-screen div.menu ul li a {
 	color: #fff;
 	text-transform: capitalize;
-	font-size: 1.1rem;	
+	font-size: 1.1rem;
+	font-family: 'Roboto Slab', serif;	
 }		
 
-nav.sm-screen > a {
+/* small screen logo */
+nav.sm-screen a {
 	color: #fff;
 	font-family: 'Kaushan Script', cursive;
 	font-size: 1.3rem;
@@ -72,14 +61,14 @@ nav.sm-screen > a {
 }
 
 /* hamburger menu */
-nav.sm-screen > div.menu-wrap {
+nav.sm-screen div.menu-wrap {
 	position: relative;
 	margin-left: 10px;
 	height: 20px;
 	width: 20px;	
 }
 /* use the checkbox on top but invisible */
-nav.sm-screen > div.menu-wrap >.toggler {
+nav.sm-screen .toggler {
 	position: absolute;
 	height: 100%;
 	width: 100%;
@@ -90,7 +79,7 @@ nav.sm-screen > div.menu-wrap >.toggler {
 	cursor: pointer;
 }
 /* hamburger menu div */
-nav.sm-screen > div.menu-wrap > div.hamburger {
+nav.sm-screen div.hamburger {
 	position: absolute;
 	height: 100%;
 	width: 100%;
@@ -101,7 +90,7 @@ nav.sm-screen > div.menu-wrap > div.hamburger {
 	align-items: center;
 }
 /* the middle line, and the top and bottom lines */
-nav.sm-screen > div.menu-wrap > div.hamburger > div {
+nav.sm-screen div.hamburger div {
 	position: relative;
 	width: 100%;
 	height: 2px;
@@ -109,8 +98,8 @@ nav.sm-screen > div.menu-wrap > div.hamburger > div {
 	transition: all 0.4s ease;
 }
 
-nav.sm-screen > div.menu-wrap > div.hamburger > div::before,
-nav.sm-screen > div.menu-wrap > div.hamburger > div::after {
+nav.sm-screen div.hamburger div::before,
+nav.sm-screen div.hamburger div::after {
 	content: '';
 	width: 100%;
 	height: 2px;
@@ -119,25 +108,25 @@ nav.sm-screen > div.menu-wrap > div.hamburger > div::after {
 	top: -5px;
 }
 
-nav.sm-screen > div.menu-wrap > div.hamburger > div::after {
+nav.sm-screen div.hamburger div::after {
 	top: 5px;
 }
 /* the animation via checkbox */
-nav.sm-screen > div.menu-wrap >.toggler:checked + div.hamburger > div {
+nav.sm-screen .toggler:checked + div.hamburger div {
 	transform: rotate(135deg);	
 }
 
-nav.sm-screen > div.menu-wrap >.toggler:checked + div.hamburger > div::before, 
-nav.sm-screen > div.menu-wrap >.toggler:checked + div.hamburger > div::after {
+nav.sm-screen .toggler:checked + div.hamburger div::before, 
+nav.sm-screen .toggler:checked + div.hamburger div::after {
 	top: 0;
 	transform: rotate(90deg);
 }
 
-nav.sm-screen > div.menu-wrap >.toggler:checked ~ div.menu {
-	display: block;
+nav.sm-screen .toggler:checked ~ div.menu {
+	opacity: 1;
 }
 
-nav.sm-screen > div.menu-wrap >.toggler:checked:hover + div.hamburger > div {
+nav.sm-screen .toggler:checked:hover + div.hamburger div {
 	transform: rotate(225deg);
 } 
 
@@ -203,11 +192,6 @@ nav.lg-screen > ul > li > ul > li > a {
 
 
 /* home page */
-
-
-/**************/
-/*hero section*/
-/**************/
 section.hero {
 	position: relative;
 	width: 100vw;
@@ -251,9 +235,6 @@ ul.products:hover::after {
 	cursor: pointer;
 }
 
-/**************************/
-/* slide show of products */
-/**************************/
 ul.products li {
 	display: block;
 	position: absolute;
@@ -339,10 +320,6 @@ section.process {
 	
 }
 
-
-/******************************/
-/* carousel of making process */
-/******************************/
 div.process-container {
 	margin-top: 5rem;
 	display: flex;
@@ -366,11 +343,11 @@ ol.description li {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	display: none;
-	transition: display 1s ease-in-out;
+	opacity: 0;
+	transition: opacity 0.8s ease-in-out;
 }
 ol.description li:first-child {
-	display: block;
+	opacity: 1;
 }
 
 div.slide-wrapper {
