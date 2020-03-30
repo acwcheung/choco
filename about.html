@@ -4,7 +4,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Craft Chocolate - About</title>
-	<link rel="stylesheet" type="text/css" href="style.css">	
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/navbar.css">	
 </head>
 <body>
 	<header></header>
@@ -49,19 +50,8 @@
 	
 
 
-
-	
-
-	
-	
-
-	
-
-
-
-	<script type="text/javascript" src="main.js"></script>
+	<script type="text/javascript" src="script/navbar.js"></script>	
 	<script>
-
 		const prev = document.querySelector('div.slide-wrapper > a.prev');
 		const next = document.querySelector('div.slide-wrapper > a.next');
 		const slides = document.querySelector('ul.slide-container');
@@ -71,7 +61,7 @@
 		prev.addEventListener('click', () => {
 			if(slideCount > 1) {
 				n = slideCount - 2;
-				slides.style.transform = `translate(${-35*n}vw ,0)`; 
+				slides.style.transform = `translate(${-400*n}px ,0)`; 
 				slideCount--;
 				showStep(slideCount);
 			}	
@@ -80,7 +70,7 @@
 		next.addEventListener('click', () => {
 			if(slideCount < 8) {
 				n = slideCount;
-				slides.style.transform = `translate(${-35*n}vw ,0)`; 
+				slides.style.transform = `translate(${-400*n}px ,0)`; 
 				slideCount++; 
 				showStep(slideCount);
 			}	
@@ -90,7 +80,9 @@
 			steps.forEach(step => step.style.opacity = '0');
 			const index = n - 1;
 			steps[index].style.opacity = '1';
-}
+		}
+
 	</script>
 </body>
 </html>
+

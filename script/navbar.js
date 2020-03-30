@@ -1,4 +1,3 @@
-// repeated html codes
 const navbar = `
 	<nav class="sm-screen">			
 		<div class="menu-wrap">
@@ -47,9 +46,5 @@ const navbar = `
 	</nav>
 `
 
-//DOM selectors
 const header = document.querySelector('header');
-
-
-//DOM manipulation
 header.innerHTML = navbar;

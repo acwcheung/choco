@@ -1,0 +1,170 @@
+/* small screen navbar */
+nav.sm-screen {
+	background: rgb(132, 96, 54);
+	height: 10vh;
+	width: 100vw;
+	position: fixed;
+	top: 0;	
+	z-index: 10;
+}
+
+/* small screen hidden menu */
+nav.sm-screen div.menu {
+	display: none;	
+}
+
+nav.sm-screen div.menu ul {
+	width: 100vw;
+	height: 85vh;
+	background-color: rgba(0, 0, 0, 0.7);
+	position: fixed;
+	top: 10vh;
+	left: 0;
+	text-align: center;	
+}
+nav.sm-screen div.menu ul li {
+	padding: 20px;
+}
+
+nav.sm-screen div.menu ul li a {
+	color: #fff;
+	text-transform: capitalize;
+	font-size: 1.1rem;
+	font-family: 'Roboto Slab', serif;	
+}		
+
+/* small screen logo */
+nav.sm-screen a {
+	color: #fff;
+	font-family: 'Kaushan Script', cursive;
+	font-size: 1.3rem;
+	font-weight: 200;
+	text-transform: capitalize;
+	text-align: center;
+}
+
+/* hamburger menu */
+nav.sm-screen div.menu-wrap {
+	position: relative;
+	margin-left: 10px;
+	height: 20px;
+	width: 20px;	
+}
+/* use the checkbox on top but invisible */
+nav.sm-screen .toggler {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	z-index: 5;
+	cursor: pointer;
+}
+/* hamburger menu div */
+nav.sm-screen div.hamburger {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+/* the middle line, and the top and bottom lines */
+nav.sm-screen div.hamburger div {
+	position: relative;
+	width: 100%;
+	height: 2px;
+	background-color: #fff;
+	transition: all 0.4s ease;
+}
+
+nav.sm-screen div.hamburger div::before,
+nav.sm-screen div.hamburger div::after {
+	content: '';
+	width: 100%;
+	height: 2px;
+	background-color: #fff;
+	position: absolute;
+	top: -5px;
+}
+
+nav.sm-screen div.hamburger div::after {
+	top: 5px;
+}
+/* the animation via checkbox */
+nav.sm-screen .toggler:checked + div.hamburger div {
+	transform: rotate(135deg);	
+}
+
+nav.sm-screen .toggler:checked + div.hamburger div::before, 
+nav.sm-screen .toggler:checked + div.hamburger div::after {
+	top: 0;
+	transform: rotate(90deg);
+}
+
+nav.sm-screen .toggler:checked ~ div.menu {
+	display: block;
+}
+
+nav.sm-screen .toggler:checked:hover + div.hamburger div {
+	transform: rotate(225deg);
+} 
+
+/* large screen navbar */
+nav.lg-screen > ul {
+	background: rgb(132, 96, 54);
+	height: 10vh;
+	width: 100vw;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	color: #fff;
+	position: fixed;
+	top: 0;
+	z-index: 10;
+}
+
+nav.lg-screen > ul > li > a {
+	text-transform: uppercase;
+	font-size: 1.1rem;
+	font-weight: 200;
+	color: #fff;
+}
+nav.lg-screen > ul > li:first-child > a {
+	font-family: 'Kaushan Script', cursive;
+	font-size: 2rem;
+	text-transform: capitalize;
+}
+/* the logo */
+nav.lg-screen > ul > li:first-child {
+	margin-left: 2vw;
+	margin-right: 15vw;
+}
+nav.lg-screen > ul > li:last-child {
+	margin-right: 3vw;
+}
+nav.lg-screen > ul > li {
+	padding: 20px 0;
+}
+/* pull down menu */
+nav.lg-screen > ul > li > ul {
+	background: rgb(132, 96, 54);
+	position: absolute;
+	top: 9.7vh;
+	display: none;
+}
+nav.lg-screen > ul > li:hover > ul,
+nav.lg-screen > ul > li > ul:hover {
+	display: block;
+}
+nav.lg-screen > ul > li > ul > li {
+	padding: 1rem;
+	
+}
+nav.lg-screen > ul > li > ul > li > a {
+	text-transform: uppercase;
+	color: #fff;
+}
