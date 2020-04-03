@@ -11,6 +11,7 @@ nav.sm-screen {
 /* small screen hidden menu */
 nav.sm-screen div.menu {
 	display: none;	
+	background: transparent;
 }
 
 nav.sm-screen div.menu ul {
@@ -31,7 +32,11 @@ nav.sm-screen div.menu ul li a {
 	text-transform: capitalize;
 	font-size: 1.1rem;
 	font-family: 'Roboto Slab', serif;	
-}		
+}	
+
+nav.sm-screen ul > li > a:hover {
+	border-bottom: 4px solid #fff;
+}
 
 /* small screen logo */
 nav.sm-screen a {
@@ -41,7 +46,13 @@ nav.sm-screen a {
 	font-weight: 200;
 	text-transform: capitalize;
 	text-align: center;
+	background: transparent;
 }
+nav.sm-screen a:hover {
+	color: #333;
+	border: none;
+}
+
 
 /* hamburger menu */
 nav.sm-screen div.menu-wrap {
@@ -60,6 +71,7 @@ nav.sm-screen .toggler {
 	opacity: 0;
 	z-index: 5;
 	cursor: pointer;
+	background: transparent;	
 }
 /* hamburger menu div */
 nav.sm-screen div.hamburger {
@@ -132,7 +144,16 @@ nav.lg-screen > ul > li > a {
 	font-size: 1.1rem;
 	font-weight: 200;
 	color: #fff;
+	background: transparent;
 }
+nav.lg-screen > ul > li > a:hover {
+	border-bottom: 4px solid #fff;
+}
+nav.lg-screen > ul > li:first-child > a:hover {
+	color: #333;
+	border: none;
+}
+
 nav.lg-screen > ul > li:first-child > a {
 	font-family: 'Kaushan Script', cursive;
 	font-size: 2rem;
@@ -148,6 +169,7 @@ nav.lg-screen > ul > li:last-child {
 }
 nav.lg-screen > ul > li {
 	padding: 20px 0;
+	background: transparent;
 }
 /* pull down menu */
 nav.lg-screen > ul > li > ul {
@@ -162,9 +184,16 @@ nav.lg-screen > ul > li > ul:hover {
 }
 nav.lg-screen > ul > li > ul > li {
 	padding: 1rem;
-	
+	background: transparent;
 }
 nav.lg-screen > ul > li > ul > li > a {
 	text-transform: uppercase;
 	color: #fff;
+	background: transparent;
 }
+nav.lg-screen > ul > li > ul > li > a:hover {
+	border-bottom: 4px solid #fff;	
+}
+
+
+

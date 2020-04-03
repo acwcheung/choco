@@ -7,7 +7,10 @@
 	text-decoration: none;
 	list-style: none;
 	color: #000;
-	font-family: 'Roboto Slab', serif;
+	font-family: 'Roboto Slab', serif;	
+}
+body {
+	background: #FEFAF1;
 }
 
 /* home page */
@@ -25,6 +28,16 @@ div.beans {
 	height: 100%;
 	transition: all 0.3s linear;
 }
+div.beans::after {
+	content: '©photo by dandelionchocolate';
+	position: absolute;
+	bottom: 3%;
+	right: 3%;
+	color: #666;
+	font-size: 0.8rem;
+	font-family: Arial;
+}
+
 div.beans:hover {
 	cursor: pointer;
 }
@@ -66,6 +79,16 @@ ul.products li {
     transform: translate(-50%, 0);
     opacity: 0;
     animation: slide 18s linear infinite;
+}
+ul.products li:nth-child(2)::after,
+ul.products li:nth-child(3)::after {
+	content: '©photo by dandelionchocolate';
+	position: absolute;
+	bottom: 3%;
+	right: 3%;
+	color: #666;
+	font-size: 0.8rem;
+	font-family: Arial;
 }
 ul.products li:nth-child(1) {
 	background-image: url('../image/choco-1.jpg');
@@ -109,6 +132,7 @@ div.hero-text {
     transform: translate(-50%, 0);
     text-align: center;
     animation: heroText 2s 1 ease-out;
+    background: transparent;
 }
 
 @keyframes heroText {
@@ -124,7 +148,7 @@ div.hero-text {
 /* about page */
 section.about {
 	position: relative;
-	margin-top: 20vh;
+	margin-top: 20vh;	
 }
 
 div.about-container {
@@ -218,6 +242,7 @@ div.slide-wrapper a {
 	font-size: 3rem;
 	color: grey;
 	cursor: pointer;
+	background: transparent;
 }
 div.slide-wrapper a.prev {
 	left: 5%;
@@ -225,10 +250,200 @@ div.slide-wrapper a.prev {
 div.slide-wrapper a.next {
 	right: 5%;
 }
+p.source {
+	position: absolute;
+    bottom: 1%;
+    right: 3%;
+    padding: 0;
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+}
 
+/* experience page */
+section.experience div.container {
+	position: relative;
+}
 
+section.experience div.container div.image {
+	height: 100vh;
+	width: 100%;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+section.experience div.container div.image::after {
+	content: '©photo by dandelionchocolate';
+	position: absolute;
+	bottom: 20%;
+	right: 3%;
+	color: #666;
+	font-size: 0.8rem;
+	font-family: Arial;
+}
 
+section.experience div.container div.image1 {
+	background-image: url('https://cdn.shopify.com/s/files/1/2434/0841/products/dandelion-chocolate-experience-16th-street-factory-tour-6923675631704_1080x.jpg?v=1552942410');
+}
+section.experience div.container div.image2 {
+	background-image: url('https://cdn.shopify.com/s/files/1/2434/0841/products/dandelion-chocolate-experience-102-ingredients-6913391067224_1080x.jpg?v=1552769315');
+}
+section.experience div.container div.image3 {
+	background-image: url('https://cdn.shopify.com/s/files/1/2434/0841/products/dandelion-chocolate-experience-104-sourcing-6917021499480_1080x.jpg?v=1552847075');
+}
+section.experience div.container div.image4 {
+	background-image: url('https://cdn.shopify.com/s/files/1/2434/0841/products/dandelion-chocolate-experience-200-bean-to-bar-6917055873112_1080x.jpg?v=1552848094');
+}
 
+section.experience div.container h1 {
+	margin: 0;
+    padding: 0;
+	position: absolute;
+	top: 40%;	
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: #fff;
+}
+section.experience div.container div.description {
+	width: 100%;
+	background: #FEFAF1;	
+}
+section.experience div.container div.description p {
+	width: 50%;
+	margin: auto;
+	text-align: center;
+	padding: 2rem 0 0.5rem;	
+}
+section.experience div.container div.description p.price {
+	color: rgb(132, 96, 54);
+	font-size: 1.2rem;
+	font-weight: 600;
+	padding: 0.5rem 0 2rem;	
+}
+/* shop page */
+section.bar {
+	margin-top: 20vh;
+}
+section.bar > p,
+section.treat > p {
+	width: 80%;
+	margin: auto;
+	margin-bottom: 5rem;
+}
+div.bar-container,
+div.treat-container {
+	width: 75%;
+    margin: auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 2rem;	
+}
+div.bar-container div.product,
+div.treat-container div.product {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+div.bar-container img {
+	width: 300px;
+	height: 400px;
+}
+div.bar-container h3,
+div.treat-container h3 {
+	text-transform: capitalize;
+	font-size: 1.2rem;
+	padding-bottom: 0.5rem;
+	text-align: center;
+}
+div.bar-container div.product p,
+div.treat-container div.product p {
+	text-align: center;
+	margin-bottom: 0.5rem;	
+}
+div.bar-container p.origin {
+	color: #666;
+	text-transform: uppercase;
+	font-size: 0.8rem;
+}
+div.bar-container p.detail,
+div.treat-container p.detail {
+	color: #333;
+	font-size: 0.8rem;
+}
+div.bar-container p.price,
+div.treat-container p.price {
+	color: rgb(132, 96, 54);
+	font-size: 1rem;
+}
+div.treat-container div.image-container {
+	width: 300px;
+	height: 400px;
+	position: relative;
+	cursor: pointer;
+}
+div.treat-container div.image-container img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	transition: opacity 0.8s linear;
+}
+div.treat-container div.image-container img.image-1 {
+	opacity: 1;
+}
+div.treat-container div.image-container img.image-2 {
+	opacity: 0;
+}
+div.treat-container div.image-container:hover img.image-1 {
+	opacity: 0;	
+}
+div.treat-container div.image-container:hover img.image-2 {
+	opacity: 1;
+}
+
+/* footer */
+.footer div.container {
+	width: 100%;
+	background: #F5EEE1;
+	margin-top: 5rem;
+}
+.footer div.container > ul {
+	width: 90%;
+	margin: auto;
+	padding: 2rem 1rem;	
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	justify-items: center;
+}
+.footer div.container > ul > li:first-child > a {
+	font-family: 'Kaushan Script', cursive;
+	font-size: 1.2rem;
+	font-weight: 600;
+	text-transform: capitalize;
+}
+
+.footer div.container > ul > li > a,
+.footer div.container > ul > li ul li a {
+	/*color: #333;*/
+	color: #846036;
+	text-transform: capitalize;
+	font-size: 0.9rem;
+	font-weight: 200;
+}
+i.fas, i.fab, i.far {
+	font-size: 1.5rem;
+	color: #846036;
+}
+.footer div.container p {
+	color: #aaa;
+	font-size: 0.5rem;
+	text-align: right;
+	padding: 0.5rem 1rem;
+	margin: 0;
+}
 
 /*  utility  */
 
@@ -238,18 +453,21 @@ h1 {
 	margin: 4rem 1rem 2rem;
 	text-transform: capitalize;
 	color: rgb(132, 96, 54);
+	background: transparent;
 }
 
 h3 {
 	color: rgb(132, 96, 54);
 	padding-bottom: 1rem;	
 	font-size: 1.8rem;
+	background: transparent;
 }
 
 p {
 	font-size: 1.2rem;
 	font-family: verdana;
-	margin-bottom: 2rem;	
+	margin-bottom: 2rem;
+	background: transparent;	
 }
 
 button {
@@ -259,28 +477,22 @@ button {
 	text-align: center;
 }
 
-
 /* media query */
-
 @media screen and (max-width: 900px) {
 	body nav.lg-screen > ul > li:first-child > a {
 		font-size: 1.2rem;
 	}
-
 	body nav.lg-screen > ul > li:first-child {
 		margin-left: 0vw;
     	margin-right: 0vw;
 	}
-
-	body nav.lg-screen > ul > li > a {
+	body nav.lg-screen > ul > li > a,
+	nav.lg-screen > ul > li > ul {
 		font-size: 0.8rem;
 	}	
 }
 
 @media screen and (max-width: 560px) {
-	div.hero-text {
-		font-size: 2rem;
-	}
 	nav.lg-screen {
 		display: none;
 	}
@@ -289,6 +501,10 @@ button {
 		grid-template-columns: repeat(3, 1fr);
 		justify-content: center;
 		align-items: center;		
+	}
+	/* home page */
+	div.hero-text {
+		font-size: 2rem;
 	}
 	section.hero {
 		display: flex;
@@ -299,6 +515,7 @@ button {
 		position: relative;
 		width: 100%
 	}
+	/* about page */
 	div.process-container {
 		flex-direction: column;
 	}
@@ -310,11 +527,21 @@ button {
 	ol.description li {
 		width: 95%;
 		padding: 1rem;
-		border-radius: 8px;		
+		border-radius: 8px;			
 	}
 	h1 {
 		font-size: 2rem;
 		margin: 2rem 1rem 1rem;
+	}
+	/* experience page */
+	section.experience div.container div.image {
+		background-attachment: scroll;
+	}
+	section.experience div.container div.image::after {
+		bottom: 27%;
+	}
+	footer {
+		display: none;
 	}
 	
 }
