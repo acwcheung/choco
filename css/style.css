@@ -543,6 +543,11 @@ button {
 	footer {
 		display: none;
 	}
+	/* shop page */
+	div.bar-container,
+	div.treat-container {
+		display: block;		
+	}
 	
 }
 
