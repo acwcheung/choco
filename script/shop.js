@@ -4,7 +4,7 @@ const chocolateBars = [
 		origin: 'costa rica - 70%',
 		detail: 'golden caramel, ganache, and waffle cone',
 		price: '$8.50',
-		url: 'https://cdn.shopify.com/s/files/1/2434/0841/products/dandelion-chocolate-chocolate-bar-hacienda-azul-costa-rica-70-2018-single-origin-chocolate-bar-13599907872908_900x.png?v=1574891144'
+		url: 'https://cdn.shopify.com/s/files/1/2434/0841/products/dandelion-chocolate-chocolate-bar-hacienda-azul-costa-rica-70-2018-single-origin-chocolate-bar-15439043068044_900x.png?v=1585847688'
 	},
 	{
 		name: 'gola rainforest',
@@ -39,7 +39,7 @@ const chocolateBars = [
 		origin: 'ecuador - 70%',
 		detail: 'notes of fudge brownie, brown sugar, and fresh milk',
 		price: '$8.5',
-		url: 'https://cdn.shopify.com/s/files/1/2434/0841/products/dandelion-chocolate-chocolate-bar-costa-esmeraldas-ecuador-70-2017-harvest-single-origin-chocolate-bar-13525427290252_900x.png?v=1573599158'
+		url: 'https://cdn.shopify.com/s/files/1/2434/0841/products/dandelion-chocolate-chocolate-bar-costa-esmeraldas-ecuador-70-2017-harvest-single-origin-chocolate-bar-15443122618508_900x.png?v=1585875773'
 	},
 ];
 

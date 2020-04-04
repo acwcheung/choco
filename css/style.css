@@ -39,7 +39,7 @@ div.beans::after {
 }
 
 div.beans:hover {
-	cursor: pointer;
+	cursor: default;
 }
 
 ul.products {
@@ -64,7 +64,7 @@ ul.products::after {
 /*code hover on psuedo code*/
 ul.products:hover::after {
 	background: rgba(0, 0, 0, 0);
-	cursor: pointer;
+	cursor: default;
 }
 ul.products li {
 	display: block;
