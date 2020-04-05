@@ -10,7 +10,44 @@
 	font-family: 'Roboto Slab', serif;	
 }
 body {
-	background: #FEFAF1;
+	background: #FEFAF1;	
+}
+
+/* loader */
+section.loader {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+section.loader span {
+	width: 0;
+	height: 0;
+	border-radius: 50%;
+	background-color: #561600;	
+	margin: 0 0.3rem;
+	animation: bounce 0.6s infinite alternate;		
+}
+section.loader > span:nth-child(2) {
+	background-color: rgb(132, 96, 54);
+	animation-delay: 0.2s;
+}	
+section.loader > span:nth-child(3) {
+	background-color: #813013;
+	animation-delay: 0.4s;
+}
+@keyframes bounce {
+	to {
+		width: 1rem;
+		height: 1rem;
+		transform: translate(0, 1rem);		
+	}
+}
+main {
+	display: none;
+	opacity: 0;
+	transition: opacity 1s ease-in;
 }
 
 /* home page */
@@ -127,23 +164,20 @@ div.hero-text {
     color: #fff;
     display: block;
     position: absolute;
-    top: 40vh;
+    top: -20vh;
     left: 50vw;
     transform: translate(-50%, 0);
     text-align: center;
     animation: heroText 2s 1 ease-out;
-    background: transparent;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;    
 }
 
 @keyframes heroText {
-	0% {
-		top: -20vh;
-	}
-	100% {
+	to {
 		top: 40vh;
 	}
 }
-
 
 /* about page */
 section.about {
