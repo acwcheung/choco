@@ -11,35 +11,35 @@ const chocolateBars = [
 		origin: 'sirra leone - 70%',
 		detail: 'flavors of molten chocolate cake, toffee, and cinnamon',
 		price: '$10',
-		url: 'https://cdn.shopify.com/s/files/1/2434/0841/products/dandelion-chocolate-chocolate-bar-gola-rainforest-sierra-leone-70-2017-harvest-single-origin-chocolate-bar--3751191150680_900x.png?v=1552080830'
+		url: 'https://cdn.shopify.com/s/files/1/2434/0841/products/dandelion-chocolate-chocolate-bar-hacienda-azul-costa-rica-70-2018-single-origin-chocolate-bar-15439043068044_900x.png?v=1585847688'
 	},
 	{
 		name: 'tumaco',
 		origin: 'colombia - 70%',
 		detail: 'flavors of wildflower honey, malted hot cocoa, and whipped cream',
 		price: '$10',
-		url: 'https://cdn.shopify.com/s/files/1/2434/0841/products/dandelion-chocolate-chocolate-bar-tumaco-colombia-70-2017-harvest--7254689153112_900x.png?v=1557518512'
+		url: 'https://cdn.shopify.com/s/files/1/2434/0841/products/dandelion-chocolate-chocolate-bar-hacienda-azul-costa-rica-70-2018-single-origin-chocolate-bar-15439043068044_900x.png?v=1585847688'
 	},
 	{
 		name: 'wampu',
 		origin: 'honduras - 70%',
 		detail: 'classic dark chocolate, macadamia nut, and honeycomb',
 		price: '$10',
-		url: 'https://cdn.shopify.com/s/files/1/2434/0841/products/dandelion-chocolate-chocolate-bar-wampu-honduras-70-2017-harvest-single-origin-chocolate-bar--7254648193112_900x.png?v=1557511652'
+		url: 'https://cdn.shopify.com/s/files/1/2434/0841/products/dandelion-chocolate-chocolate-bar-hacienda-azul-costa-rica-70-2018-single-origin-chocolate-bar-15439043068044_900x.png?v=1585847688'
 	},
 	{
 		name: 'kokoa kamili',
 		origin: 'tanzania - 70%',
 		detail: 'notes of honey, fresh peach, and homemade fudge',
 		price: '$8.5',
-		url: 'https://cdn.shopify.com/s/files/1/2434/0841/products/dandelion-chocolate-chocolate-bar-kokoa-kamili-tanzania-70-2017-harvest-single-origin-chocolate-bar-14746991820940_900x.png?v=1583279042'
+		url: 'https://cdn.shopify.com/s/files/1/2434/0841/products/dandelion-chocolate-chocolate-bar-hacienda-azul-costa-rica-70-2018-single-origin-chocolate-bar-15439043068044_900x.png?v=1585847688'
 	},
 	{
 		name: 'costa esmeraldas',
 		origin: 'ecuador - 70%',
 		detail: 'notes of fudge brownie, brown sugar, and fresh milk',
 		price: '$8.5',
-		url: 'https://cdn.shopify.com/s/files/1/2434/0841/products/dandelion-chocolate-chocolate-bar-costa-esmeraldas-ecuador-70-2017-harvest-single-origin-chocolate-bar-15443122618508_900x.png?v=1585875773'
+		url: 'https://cdn.shopify.com/s/files/1/2434/0841/products/dandelion-chocolate-chocolate-bar-hacienda-azul-costa-rica-70-2018-single-origin-chocolate-bar-15439043068044_900x.png?v=1585847688'
 	},
 ];
 

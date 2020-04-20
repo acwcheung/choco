@@ -14,14 +14,25 @@ body {
 }
 
 /* loader */
-section.loader {
+div.loader-wrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+    width: 100%;
+    z-index: 100;
+    transition: opacity 0.5s linear;
+}
+
+div.loader {
 	width: 100%;
 	height: 100vh;
+	background: #FEFAF1;		
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
-section.loader span {
+div.loader span {
 	width: 0;
 	height: 0;
 	border-radius: 50%;
@@ -29,11 +40,11 @@ section.loader span {
 	margin: 0 0.3rem;
 	animation: bounce 0.6s infinite alternate;		
 }
-section.loader > span:nth-child(2) {
+div.loader > span:nth-child(2) {
 	background-color: rgb(132, 96, 54);
 	animation-delay: 0.2s;
 }	
-section.loader > span:nth-child(3) {
+div.loader > span:nth-child(3) {
 	background-color: #813013;
 	animation-delay: 0.4s;
 }
@@ -43,11 +54,6 @@ section.loader > span:nth-child(3) {
 		height: 1rem;
 		transform: translate(0, 1rem);		
 	}
-}
-main {
-	display: none;
-	opacity: 0;
-	transition: opacity 1s ease-in;
 }
 
 /* home page */
@@ -437,6 +443,103 @@ div.treat-container div.image-container:hover img.image-1 {
 div.treat-container div.image-container:hover img.image-2 {
 	opacity: 1;
 }
+
+/* visit page */
+section.store {
+	display: flex;	
+}
+
+section.store div.showcase-image {
+	width: 50%;
+	height: 90vh;
+	position: relative;	
+	margin-top: 10vh;
+	background: url('https://cdn.shopify.com/s/files/1/2434/0841/products/dandelion-chocolate-experience-facilities-rental-12126249156696_1080x.jpg?v=1565212548');
+	background-position: center;
+	background-size: cover;
+}
+section.store div.showcase-image svg {
+	position: absolute;
+	top: 35%;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+/* for drawing the lettr */
+section.store div.showcase-image svg path:nth-child(1) {
+	stroke-dasharray: 242.62396240234375;
+	stroke-dashoffset: 242.62396240234375;
+	animation: line-drawing 2s ease forwards 2s;	
+}
+section.store div.showcase-image svg path:nth-child(2) {
+	stroke-dasharray: 259.7684326171875;
+	stroke-dashoffset: 259.7684326171875;	
+	animation: line-drawing 2s ease forwards 2.3s;	
+}
+section.store div.showcase-image svg path:nth-child(3) {
+	stroke-dasharray: 281.3534240722656;
+	stroke-dashoffset: 281.3534240722656;
+	animation: line-drawing 2s ease forwards 2.6s;	
+}
+section.store div.showcase-image svg path:nth-child(4) {
+	stroke-dasharray: 242.2799835205078;
+	stroke-dashoffset: 242.2799835205078;
+	animation: line-drawing 2s ease forwards 2.9s;	
+}
+section.store div.showcase-image svg path:nth-child(5) {
+	stroke-dasharray: 205.4085235595703;
+	stroke-dashoffset: 205.4085235595703;
+	animation: line-drawing 2s ease forwards 3.2s;	
+}
+section.store div.showcase-image svg path:nth-child(6) {
+	stroke-dasharray: 242.62417602539062;
+	stroke-dashoffset: 242.62417602539062;
+	animation: line-drawing 2s ease forwards 3.5s;	
+}
+section.store div.showcase-image svg path:nth-child(7) {
+	stroke-dasharray: 281.3529052734375;
+	stroke-dashoffset: 281.3529052734375;
+	animation: line-drawing 2s ease forwards 3.8s;	
+}
+section.store div.showcase-image svg path:nth-child(8) {
+	stroke-dasharray: 275.7510986328125;
+	stroke-dashoffset: 275.7510986328125;
+	animation: line-drawing 2s ease forwards 4.1s;	
+}
+
+@keyframes line-drawing {
+	to {
+		stroke-dashoffset: 0;	
+	}
+}
+
+
+
+
+
+section.store div.showcase-container {
+	width: 50%;
+	height: 90vh;
+	position: relative;
+	margin-top: 10vh;
+	overflow: scroll;
+}
+
+section.store div.showcase-container div.showcase-address {
+	position: absolute;
+	left: 50%;
+	top: 10%;
+	transform: translate(-50%, 0);
+	width: 55%;
+}
+
+section.store div.showcase-container div.showcase-address p {
+	font-size: 1rem;
+	line-height: 1.5rem;
+}
+
+
+
+
 
 /* footer */
 .footer div.container {

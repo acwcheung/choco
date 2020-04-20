@@ -9,7 +9,7 @@ const navbar = `
 				<ul>
 					<li><a href="shop.html">shop</a></li>
 					<li><a href="experience.html">experience</a></li>
-					<li><a href="#">visit</a></li>
+					<li><a href="visit.html">visit</a></li>
 					<li><a href="about.html">about</a>
 					<li><a href="">more</a></li>
 				</ul>
@@ -24,7 +24,7 @@ const navbar = `
 			<li><a href="index.html">craft choco</a></li>
 			<li><a href="shop.html">shop</a></li>
 			<li><a href="experience.html">experience</a></li>
-			<li><a href="#">visit</a></li>
+			<li><a href="visit.html">visit</a></li>
 			<li><a href="about.html">about</a>
 				<ul>
 					<li><a href="">overview</a></li>

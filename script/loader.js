@@ -1,13 +1,9 @@
-const loader = document.querySelector('.loader');
-const main = document.querySelector('main');
+const loader = document.querySelector('.loader-wrapper');
 
-function init() {
+window.addEventListener('load', () => {
 	setTimeout(() => {
 		loader.style.opacity = 0;
-		loader.style.display = 'none';				
-		main.style.display = 'block';				
-		setTimeout(() => {main.style.opacity = 1}, 50);
-	}, 3000);
-}
+		loader.style.display = 'none';						
+	}, 1500)	
+}); 
 
-init();

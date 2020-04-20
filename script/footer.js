@@ -6,7 +6,7 @@ const footer = `
 				<ul>
 					<li><a href="shop.html">shop</a></li>
 					<li><a href="experience.html">experience</a></li>
-					<li><a href="#">visit</a></li>
+					<li><a href="visit.html">visit</a></li>
 				</ul>
 			</li>				
 			<li><a href="about.html">about</a>
