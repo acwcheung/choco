@@ -31,7 +31,7 @@ nav.sm-screen div.menu ul li a {
 	color: #fff;
 	text-transform: capitalize;
 	font-size: 1.1rem;
-	font-family: 'Roboto Slab', serif;	
+	font-family: 'Roboto Slab', serif;		
 }	
 
 nav.sm-screen ul > li > a:hover {
@@ -146,9 +146,20 @@ nav.lg-screen > ul > li > a {
 	color: #fff;
 	background: transparent;
 }
-nav.lg-screen > ul > li > a:hover {
-	border-bottom: 4px solid #fff;
+
+nav.lg-screen > ul > li:not(:first-child) > a::after {
+	content: '';
+	width: 0;
+	opacity: 0;
+	display: block;
+	border-bottom: 2px solid #fff;
+	transition: width 0.35s ease-in-out, opacity 0.35s ease-in-out;
 }
+nav.lg-screen > ul > li > a:hover::after {
+	opacity: 1;
+	width: 100%;
+}
+
 nav.lg-screen > ul > li:first-child > a:hover {
 	color: #333;
 	border: none;
@@ -180,7 +191,7 @@ nav.lg-screen > ul > li > ul {
 }
 nav.lg-screen > ul > li:hover > ul,
 nav.lg-screen > ul > li > ul:hover {
-	display: block;
+	display: block;	
 }
 nav.lg-screen > ul > li > ul > li {
 	padding: 1rem;
@@ -189,10 +200,20 @@ nav.lg-screen > ul > li > ul > li {
 nav.lg-screen > ul > li > ul > li > a {
 	text-transform: uppercase;
 	color: #fff;
-	background: transparent;
+	background: transparent;	
 }
-nav.lg-screen > ul > li > ul > li > a:hover {
-	border-bottom: 4px solid #fff;	
+nav.lg-screen > ul > li > ul > li > a::after {
+	content: '';
+	width: 0;
+	opacity: 0;
+	display: block;
+	border-bottom: 1px solid #fff;
+	transition: width 0.35s ease-in-out, opacity 0.35s ease-in-out;
+}
+
+nav.lg-screen > ul > li > ul > li > a:hover::after {
+	opacity: 1;
+	width: 100%;	
 }
 
 

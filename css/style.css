@@ -685,7 +685,16 @@ button {
 	div.treat-container {
 		display: block;		
 	}
-	
+	/* vist page */
+	section.store {
+		flex-direction: column;	
+	}
+	section.store div.showcase-image {
+		width: 100%;
+	}
+	section.store div.showcase-container {
+		width: 100%;	
+	}	
 }
 
 
